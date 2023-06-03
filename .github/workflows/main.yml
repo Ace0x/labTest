@@ -100,7 +100,7 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
         with:
           registry-type: public
-      - name: Build and tag image
+      - name: Build and tag image  
         uses: docker/build-push-action@v4
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
